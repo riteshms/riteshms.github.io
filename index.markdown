@@ -4,3 +4,6 @@
 
 layout: home
 ---
+# Welcome to My Site
+
+This is a test homepage. I can add links to [About](/about/).
