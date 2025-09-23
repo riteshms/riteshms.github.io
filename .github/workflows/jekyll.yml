@@ -26,6 +26,8 @@ jobs:
       # 2️⃣ Install system dependencies
       - name: Install system dependencies
         run: |
+          gem install sassc -v 2.4.0   # pin older Sass version compatible with @import
+          bundle install
           sudo apt-get update
           sudo apt-get install -y imagemagick python3 python3-pip
           pip3 install notebook nbconvert
@@ -36,8 +38,6 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
-          # Force older Sass version compatible with @import
-          gems: "sassc:2.4.0"
 
       # 4️⃣ Configure GitHub Pages
       - name: Setup Pages
