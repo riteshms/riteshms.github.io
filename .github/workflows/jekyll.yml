@@ -36,6 +36,8 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+          # Force older Sass version compatible with @import
+          gems: "sassc:2.4.0"
 
       # 4️⃣ Configure GitHub Pages
       - name: Setup Pages
