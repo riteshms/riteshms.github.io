@@ -26,12 +26,22 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
-  
+          
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Create venv and install Python dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install notebook==6.5.6 nbconvert jupyter_contrib_nbextensions
+          
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           gem install sassc -v 2.4.0
-          pip install notebook nbconvert jupyter_contrib_nbextensions
           bundle install
 
       - name: Clean previous Jekyll builds
