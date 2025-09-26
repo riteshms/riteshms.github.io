@@ -1,6 +1,8 @@
 // mixins
 // --------------------------
 
+@use 'variables' as *;
+@use 'functions' as *;
 @use "sass:string";
 
 // base rendering for an icon

@@ -21,7 +21,6 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
-	gem "jekyll-sass-converter", "~> 3.0"
 
     gem 'classifier-reborn'  # used for content categorization during the build
 end
@@ -33,6 +32,7 @@ group :other_plugins do
     gem 'httparty'
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin
+	gem 'activesupport', '~> 6.1.0'
     # gem 'terser'         # used by jekyll-terser
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll

@@ -31,7 +31,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           gem install sassc -v 2.4.0
-          pip install notebook nbconvert
+          pip install notebook nbconvert jupyter_contrib_nbextensions
           bundle install
   
       - name: Setup Pages
@@ -42,7 +42,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-  
+ 		  ACTIVESUPPORT_TO_TIME_PRESERVES_TIMEZONE: true
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
 

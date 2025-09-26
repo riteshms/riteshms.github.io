@@ -642,3 +642,9 @@ jsonresume:
   - languages
   - interests
   - references
+
+# ----------------------------------------------------------------------------
+# Fixing a deprecation warning
+# ----------------------------------------------------------------------------
+active_support:
+  to_time_preserves_timezone: :zone
