@@ -33,7 +33,10 @@ jobs:
           gem install sassc -v 2.4.0
           pip install notebook nbconvert jupyter_contrib_nbextensions
           bundle install
-  
+
+      - name: Clean previous Jekyll builds
+        run: bundle exec jekyll clean
+      
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
