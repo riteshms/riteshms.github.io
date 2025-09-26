@@ -42,7 +42,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
- 		  ACTIVESUPPORT_TO_TIME_PRESERVES_TIMEZONE: true
+          ACTIVESUPPORT_TO_TIME_PRESERVES_TIMEZONE: true
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
 
